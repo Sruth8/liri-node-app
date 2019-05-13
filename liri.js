@@ -5,11 +5,11 @@ var keys = require("./keys.js");
 
 var axios = require("axios");
 var fs = require("fs");
-//var spotify = require('spotify');
+
 
 var Spotify = require("node-spotify-api");
 
-var client_spotify = new Spotify(keys.spotify);
+var spotify = new Spotify(keys.spotify);
 var request = require("request");
 
 // var spotify = new Spotify({
@@ -31,8 +31,9 @@ var request = require("request");
 
 var input = process.argv;
 var command = input[2]; // this gets the users input
-                       // this gets the song names
-var userdata = "";
+var userdata = input[3];                      
+// var userdata = "";
+
 //  for (i = 3; i < input.length; i++) {
 // 	name = name + " " + input[i];
 //}
@@ -42,17 +43,18 @@ var userdata = "";
 function spotifyJams(info) {
     if (info) {
 
-    info = '"The Sign" by Ace of Base';
+    info =  'The Sign by Ace of Base';  //info || '"The Sign" by Ace of Base'
+    
     }
-
-    client_spotify.search({ type: 'track', query: info }, function (error, data) {
+    spotify.search({ type: 'track', query: info }, function (error, data) {
 
         if (error) {
-            console.log(error);
-            return;
+             console.log('Error occurred: ' + error);
+             return; 
         }
 
-        var report = data.tracks.items;
+       // console.log(data);
+         var report = data.tracks.items;
 
         console.log("Artist(s): " + report[0].artists[0].name);
         console.log("Song Name: " + report[0].name);
@@ -60,7 +62,7 @@ function spotifyJams(info) {
         console.log("Album: " + report[0].album.name);
     })
 
-};
+ };
 
 
 
@@ -124,7 +126,7 @@ switch (command) {
         if (userdata) {
             spotifyJams(userdata);
         } else {
-            spotifyJams('"The Sign" by Ace of Base"');
+            spotifyJams();
         };
         break;
 
