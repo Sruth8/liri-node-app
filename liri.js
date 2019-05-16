@@ -120,7 +120,7 @@ function liriSays() {
     });
 
 };
-  //concert-this
+  //concert-this  Patrick helped me with this part of the code
 function concert(info) {
     var queryUrl = "https://rest.bandsintown.com/artists/" + info + "/events?app_id=codingbootcamp";
 
