@@ -41,7 +41,7 @@ var userdata = input[3];
 
 //  spotify-this-song function
 function spotifyJams(info) {
-    if (info) {
+    if (!info) {
 
         info = 'The Sign by Ace of Base';  //info || '"The Sign" by Ace of Base'
 
@@ -130,8 +130,11 @@ function concert(info) {
 
         }
 
+
+
         //var result = JSON.parse(body)[0];  // got this from youtube. this is suppose to formate the info in console.log
         if (!error && response.statusCode === 200) {
+            var result = JSON.parse(response.body)[0];
             console.log("City: " + result.venue.city);
             console.log("Venue Name: " + result.venue.name);
             console.log("Event Date: " + moment(result.datetime).format("mm/dd/yyyy")
@@ -141,11 +144,11 @@ function concert(info) {
     });
 }
 
-function concert() {
-    fs.readFile("random.txt", "utf-8", function(error, data) {
-        console.log(error);
-    });
-}
+// function concert() {
+//     fs.readFile("random.txt", "utf-8", function(error, data) {
+//         console.log(error);
+//     });
+// }
 
 // //  Run liri.js  switches
 switch (command) {
