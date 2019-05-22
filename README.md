@@ -12,7 +12,7 @@ HW10
  1. Run npm install
  2. Use the command prompt run liri.js <instruction> "Your Search" 
 
- The following is a screenshot
+ The following is a screenshot of how this program works.
 
 ![Liri-giphy](https://user-images.githubusercontent.com/46385062/58144260-b12d2d80-7c1b-11e9-8227-8755b83aa6b4.gif)
 
