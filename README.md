@@ -17,9 +17,9 @@ HW10
 ![Liri-giphy](https://user-images.githubusercontent.com/46385062/58144260-b12d2d80-7c1b-11e9-8227-8755b83aa6b4.gif)
 
 
-Techologies Used
-Spotify API
-Bands In Town
+Techologies Used;
+Spotify API,
+Bands In Town,
 OMDB API
 
  
