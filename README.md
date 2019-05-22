@@ -14,8 +14,7 @@ HW10
 
  The following is a screenshot
 
-
-<div style="width:100%;height:0;padding-bottom:74%;position:relative;"><iframe src="https://giphy.com/embed/KCknLnv62VwgLrZdpC" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/liri-KCknLnv62VwgLrZdpC">via GIPHY</a></p>
+![Liri-giphy](https://user-images.githubusercontent.com/46385062/58144260-b12d2d80-7c1b-11e9-8227-8755b83aa6b4.gif)
 
 
 Techologies Used
